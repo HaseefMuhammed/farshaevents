@@ -26,6 +26,186 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+        .services .service-card {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+          border: 1.5px solid rgba(212, 165, 116, 0.3);
+          border-radius: 1.25rem;
+          padding: 2.5rem 2rem;
+          text-align: center;
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 1.25rem;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Premium shimmer effect on hover */
+        .services .service-card::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: linear-gradient(
+            45deg,
+            transparent 30%,
+            rgba(212, 165, 116, 0.1) 50%,
+            transparent 70%
+          );
+          transform: rotate(45deg);
+          opacity: 0;
+          transition: opacity 0.6s ease;
+        }
+
+        .services .service-card:hover::before {
+          opacity: 1;
+          animation: shimmer 0.6s ease;
+        }
+
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%) translateY(-100%) rotate(45deg);
+          }
+          100% {
+            transform: translateX(100%) translateY(100%) rotate(45deg);
+          }
+        }
+
+        .services .service-card:hover {
+          background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(212, 165, 116, 0.08));
+          border-color: var(--accent-color, #d4a574);
+          transform: translateY(-12px) scale(1.02);
+          box-shadow: 0 20px 48px rgba(212, 165, 116, 0.25);
+        }
+
+        .services .service-icon {
+          width: 4rem;
+          height: 4rem;
+          background: linear-gradient(135deg, var(--accent-color, #d4a574), rgba(212, 165, 116, 0.8));
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 2rem;
+          color: white;
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+          box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3);
+          position: relative;
+          z-index: 1;
+        }
+
+        .services .service-card:hover .service-icon {
+          transform: scale(1.15) rotateY(10deg);
+          box-shadow: 0 12px 32px rgba(212, 165, 116, 0.4);
+        }
+
+        .services .service-card h4 {
+          color: white;
+          font-size: 1.2rem;
+          font-weight: 700;
+          margin: 0;
+          letter-spacing: 0.5px;
+          transition: all 0.5s ease;
+          position: relative;
+          z-index: 1;
+        }
+
+        .services .service-card:hover h4 {
+          color: var(--accent-color, #d4a574);
+        }
+
+        .services .service-card p {
+          color: rgba(255, 255, 255, 0.75);
+          font-size: 0.98rem;
+          margin: 0;
+          line-height: 1.6;
+          transition: all 0.5s ease;
+          position: relative;
+          z-index: 1;
+        }
+
+        .services .service-card:hover p {
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1199px) {
+          .services .service-card {
+            padding: 2rem 1.5rem;
+            border-radius: 1.1rem;
+          }
+
+          .services .service-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            font-size: 1.7rem;
+          }
+
+          .services .service-card h4 {
+            font-size: 1.1rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .services .service-card {
+            padding: 1.75rem 1.5rem;
+            gap: 1rem;
+            border-radius: 1rem;
+          }
+
+          .services .service-icon {
+            width: 3.25rem;
+            height: 3.25rem;
+            font-size: 1.5rem;
+          }
+
+          .services .service-card h4 {
+            font-size: 1.05rem;
+          }
+
+          .services .service-card p {
+            font-size: 0.93rem;
+          }
+
+          .services .service-card:hover {
+            transform: translateY(-10px) scale(1.01);
+          }
+        }
+
+        @media (max-width: 576px) {
+          .services .service-card {
+            padding: 1.5rem 1.25rem;
+            gap: 0.75rem;
+            border-radius: 0.95rem;
+          }
+
+          .services .service-icon {
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.3rem;
+          }
+
+          .services .service-card h4 {
+            font-size: 1rem;
+          }
+
+          .services .service-card p {
+            font-size: 0.88rem;
+            line-height: 1.5;
+          }
+
+          .services .service-card:hover {
+            transform: translateY(-8px) scale(1.005);
+          }
+        }
+      </style>
 
   <!-- =======================================================
   * Template Name: Platia
@@ -103,7 +283,7 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section dark-background" style="position:relative;">
 
       <div class="hero-background">
         <video autoplay="" muted="" loop="" playsinline="">
@@ -114,97 +294,152 @@
 
       <div class="container hero-content">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="align-items-cente r d-flex justify-content-center">
             <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
               <span class="tagline">Experience Culinary Excellence</span>
-              <h1 class="hero-title">Savor Every Moment at Platia</h1>
+              <h1 class="hero-title">#Savor Every Moment at Platia</h1>
               <p class="hero-description">Indulge in authentic Italian cuisine crafted with passion and the finest ingredients. From traditional recipes passed down through generations to innovative culinary creations, we offer an unforgettable dining experience.</p>
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-                <a href="#" class="btn btn-primary">Book a Table</a>
-                <a href="#" class="btn btn-outline">View Menu</a>
+                <a href="#" class="btn btn-primary">Explore services</a>
+                <a href="#" class="btn btn-outline">Get in touch</a>
               </div>
-
-              <div class="hero-features" data-aos="fade-up" data-aos-delay="300">
-                <div class="feature-item">
-                  <i class="bi bi-clock"></i>
-                  <div class="feature-text">
-                    <span class="label">Open Daily</span>
-                    <span class="value">11:00 AM - 11:00 PM</span>
-                  </div>
-                </div>
-                <div class="feature-item">
-                  <i class="bi bi-geo-alt"></i>
-                  <div class="feature-text">
-                    <span class="label">Location</span>
-                    <span class="value">Downtown Chicago</span>
-                  </div>
-                </div>
-                <div class="feature-item">
-                  <i class="bi bi-telephone"></i>
-                  <div class="feature-text">
-                    <span class="label">Reservations</span>
-                    <span class="value">+1 (312) 555-0198</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="booking-card" data-aos="fade-left" data-aos-delay="200">
-              <h3>Make a Reservation</h3>
-              <form action="forms/book-a-table.php" method="post" class="php-email-form">
-                <div class="row gy-3">
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Your Email" required="">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="tel" name="phone" class="form-control" placeholder="Your Phone" required="">
-                  </div>
-                  <div class="col-md-6">
-                    <select name="people" class="form-control" required="">
-                      <option value="">Guests</option>
-                      <option value="1">1 Person</option>
-                      <option value="2">2 People</option>
-                      <option value="3">3 People</option>
-                      <option value="4">4 People</option>
-                      <option value="5">5+ People</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <input type="date" name="date" class="form-control" required="">
-                  </div>
-                  <div class="col-md-6">
-                    <input type="time" name="time" class="form-control" required="">
-                  </div>
-                  <div class="col-12">
-                    <textarea name="message" class="form-control" rows="3" placeholder="Special requests or dietary restrictions"></textarea>
-                  </div>
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your reservation request has been sent. We'll contact you shortly!</div>
-                    <button type="submit" class="btn btn-primary w-100">Reserve Now</button>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
-        <div class="scroll-text">Scroll to Explore</div>
-        <div class="scroll-arrow">
-          <i class="bi bi-chevron-down"></i>
+      <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.35rem; text-align:center; z-index:10;">
+        <div class="scroll-text" style="font-size:0.95rem;">Scroll to Explore</div>
+        <div class="scroll-arrow" style="display:flex; align-items:center; justify-content:center;">
+          <i class="bi bi-chevron-down" style="font-size:1.25rem;"></i>
         </div>
       </div>
+
+      <style>
+        /* Responsive adjustments for the scroll indicator */
+        #hero .scroll-indicator { bottom: 3rem; }
+        @media (max-width: 768px) {
+          #hero .scroll-indicator { bottom: 2rem; }
+          #hero .scroll-indicator .scroll-text { font-size:0.9rem; }
+          #hero .scroll-indicator .scroll-arrow i { font-size:1.05rem; }
+        }
+        @media (max-width: 420px) {
+          #hero .scroll-indicator { bottom: 1.25rem; gap:.25rem; }
+          #hero .scroll-indicator .scroll-text { font-size:0.82rem; }
+          #hero .scroll-indicator .scroll-arrow i { font-size:0.95rem; }
+        }
+      </style>
 
     </section><!-- /Hero Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section dark-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">Services</span>
+        <h2>Our Exquisite Services</h2>
+        <p>Crafting unforgettable experiences with precision and passion.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <!-- Service Card 1 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="150">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-list-check"></i>
+              </div>
+              <h4>Event Planning</h4>
+              <p>End-to-end event coordination and seamless execution.</p>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-cake2"></i>
+              </div>
+              <h4>Wedding Catering</h4>
+              <p>Bespoke menus and exquisite service for your special day.</p>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="250">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-brightness-high"></i>
+              </div>
+              <h4>Stage & Lighting</h4>
+              <p>Creating the perfect ambiance with professional setups.</p>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-flower1"></i>
+              </div>
+              <h4>Decorations</h4>
+              <p>Thematic and elegant decor to transform any venue.</p>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="350">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-cone-striped"></i>
+              </div>
+              <h4>Festive Catering</h4>
+              <p>Special menus and arrangements for all festive occasions.</p>
+            </div>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <h4>Corporate Events</h4>
+              <p>Professional and reliable catering for corporate functions.</p>
+            </div>
+          </div>
+
+          <!-- Service Card 7 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="450">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-house"></i>
+              </div>
+              <h4>Birthday Functions</h4>
+              <p>Personalized services for memorable private parties.</p>
+            </div>
+          </div>
+
+          <!-- Service Card 8 -->
+          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="500">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4>Full Crew & Mgmt</h4>
+              <p>A complete, professional service team at your disposal.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -681,8 +916,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Chefs</span>
-        <h2>Chefs</h2>
+        <span class="description-title">Meet our team</span>
+        <h2>Officials</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
@@ -826,7 +1061,7 @@
                 <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
                   <div class="reservation-form-section">
                     <div class="form-header text-center">
-                      <h3>Make a Reservation</h3>
+                      <h3>Plan Your Event</h3>
                       <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.</p>
                     </div>
 
@@ -847,27 +1082,8 @@
                         <div class="col-6">
                           <input type="time" class="form-control" name="time" required="">
                         </div>
-                        <div class="col-6">
-                          <select name="people" class="form-select" required="">
-                            <option value="">Guests</option>
-                            <option value="1">1 Guest</option>
-                            <option value="2">2 Guests</option>
-                            <option value="3">3 Guests</option>
-                            <option value="4">4 Guests</option>
-                            <option value="5">5 Guests</option>
-                            <option value="6">6+ Guests</option>
-                          </select>
-                        </div>
-                        <div class="col-6">
-                          <select name="occasion" class="form-select">
-                            <option value="">Occasion</option>
-                            <option value="birthday">Birthday</option>
-                            <option value="anniversary">Anniversary</option>
-                            <option value="business">Business Dinner</option>
-                            <option value="date">Date Night</option>
-                            <option value="celebration">Celebration</option>
-                            <option value="other">Other</option>
-                          </select>
+                        <div class="col-12">
+                          <input type="text" class="form-control" name="program" placeholder="Occasion" required="">
                         </div>
                         <div class="col-12">
                           <textarea class="form-control" name="message" rows="3" placeholder="Special requests or dietary requirements"></textarea>
@@ -882,7 +1098,7 @@
 
                       <button type="submit" class="btn-reserve w-100">
                         <i class="bi bi-calendar-check me-2"></i>
-                        Reserve Table
+                       Get a Quote
                       </button>
                     </form>
                   </div>
@@ -1055,83 +1271,8 @@
     <section id="events" class="events section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Events</span>
-        <h2>Events</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center" data-aos="fade-up" data-aos-delay="150">
-            <div class="seasonal-hero">
-              <span class="seasonal-badge">Limited Time</span>
-              <h2>Autumn Harvest Festival</h2>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-              <div class="festival-dates">
-                <i class="bi bi-calendar-event"></i>
-                <span>October 15 - November 30, 2024</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4 mb-5" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-6" data-aos="slide-right" data-aos-delay="250">
-            <div class="feature-card primary">
-              <div class="feature-visual">
-                <img src="assets/img/restaurant/misc-3.webp" alt="Special Menu" class="img-fluid">
-                <div class="feature-badge">
-                  <i class="bi bi-star-fill"></i>
-                  <span>Chef's Special</span>
-                </div>
-              </div>
-              <div class="feature-content">
-                <h3>Seasonal Harvest Menu</h3>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                <div class="feature-highlights">
-                  <div class="highlight-item">
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span>Farm-to-Table Ingredients</span>
-                  </div>
-                  <div class="highlight-item">
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span>Locally Sourced Produce</span>
-                  </div>
-                </div>
-                <a href="#" class="feature-link">Explore Menu <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="slide-left" data-aos-delay="300">
-            <div class="feature-card secondary">
-              <div class="feature-visual">
-                <img src="assets/img/restaurant/misc-7.webp" alt="Wine Pairing" class="img-fluid">
-                <div class="feature-badge">
-                  <i class="bi bi-award-fill"></i>
-                  <span>Award Winning</span>
-                </div>
-              </div>
-              <div class="feature-content">
-                <h3>Wine Pairing Experience</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
-                <div class="feature-highlights">
-                  <div class="highlight-item">
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span>Sommelier Curated</span>
-                  </div>
-                  <div class="highlight-item">
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span>Premium Selection</span>
-                  </div>
-                </div>
-                <a href="#" class="feature-link">Book Tasting <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
           <div class="row align-items-center">

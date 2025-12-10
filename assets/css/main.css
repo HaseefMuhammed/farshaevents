@@ -14,45 +14,59 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Source Serif Pro",  sans-serif;
-  --nav-font: "Roboto Slab",  sans-serif;
+  --default-font: "Lato", sans-serif;
+  --heading-font: "Cormorant Garamond", serif;
+  --nav-font: "Montserrat", sans-serif;
 }
+
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors - Updated to match FARSH A event & catering logo theme */
 :root { 
-  --background-color: #f8efeb; /* Background color for the entire website, including individual sections */
-  --default-color: #352a26; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #291812; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #e07844; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  /* Main Dark Background */
+  --background-color: #121e20;           
+  
+  /* Body Text - Muted Blue-Grey */
+  --default-color: #97bec3;              
+  
+  /* Headings - CHANGED from White to Gold */
+  --heading-color: #D4AF37;              
+  
+  /* Accent/Icons - Gold */
+  --accent-color: #D4AF37;               
+  
+  /* Cards/Box Background */
+  --surface-color: #1c2e31;              
+  
+  /* High Contrast Text - CHANGED from White to Soft Beige */
+  --contrast-color: #E8D7B2;             
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.6);  /* The default color of the main navmenu links */
-  --nav-hover-color: #e07844; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #352a26; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #e07844; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #97bec3;                   /* Muted Text */
+  --nav-hover-color: #D4AF37;             /* Gold Hover */
+  --nav-mobile-background-color: #121e20; 
+  --nav-dropdown-background-color: #1c2e31;
+  --nav-dropdown-color: #E8D7B2;          /* Soft Beige (No White) */
+  --nav-dropdown-hover-color: #D4AF37;
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* Light Background Section Variation */
 .light-background {
-  --background-color: #efe3de;
-  --surface-color: #ffffff;
+  --background-color: #1c2e31;            /* Card Color */
+  --surface-color: #274144;               /* Darker Button Color */
 }
 
+/* Dark Background Section Variation */
 .dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
+  --background-color: #121e20;
+  --default-color: #97bec3;
+  --heading-color: #D4AF37;               /* Gold */
+  --surface-color: #1c2e31;
+  --contrast-color: #E8D7B2;              /* Soft Beige */
 }
+
 
 /* Smooth scroll */
 :root {
@@ -1030,7 +1044,7 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+   background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(15,15,15,1));
 }
 
 .hero .hero-text .tagline {
