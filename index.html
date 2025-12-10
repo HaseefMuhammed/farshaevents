@@ -26,186 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <style>
-        .services .service-card {
-          background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
-          border: 1.5px solid rgba(212, 165, 116, 0.3);
-          border-radius: 1.25rem;
-          padding: 2.5rem 2rem;
-          text-align: center;
-          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 1.25rem;
-          cursor: pointer;
-          position: relative;
-          overflow: hidden;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Premium shimmer effect on hover */
-        .services .service-card::before {
-          content: '';
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
-          background: linear-gradient(
-            45deg,
-            transparent 30%,
-            rgba(212, 165, 116, 0.1) 50%,
-            transparent 70%
-          );
-          transform: rotate(45deg);
-          opacity: 0;
-          transition: opacity 0.6s ease;
-        }
-
-        .services .service-card:hover::before {
-          opacity: 1;
-          animation: shimmer 0.6s ease;
-        }
-
-        @keyframes shimmer {
-          0% {
-            transform: translateX(-100%) translateY(-100%) rotate(45deg);
-          }
-          100% {
-            transform: translateX(100%) translateY(100%) rotate(45deg);
-          }
-        }
-
-        .services .service-card:hover {
-          background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(212, 165, 116, 0.08));
-          border-color: var(--accent-color, #d4a574);
-          transform: translateY(-12px) scale(1.02);
-          box-shadow: 0 20px 48px rgba(212, 165, 116, 0.25);
-        }
-
-        .services .service-icon {
-          width: 4rem;
-          height: 4rem;
-          background: linear-gradient(135deg, var(--accent-color, #d4a574), rgba(212, 165, 116, 0.8));
-          border-radius: 1rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 2rem;
-          color: white;
-          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-          box-shadow: 0 8px 24px rgba(212, 165, 116, 0.3);
-          position: relative;
-          z-index: 1;
-        }
-
-        .services .service-card:hover .service-icon {
-          transform: scale(1.15) rotateY(10deg);
-          box-shadow: 0 12px 32px rgba(212, 165, 116, 0.4);
-        }
-
-        .services .service-card h4 {
-          color: white;
-          font-size: 1.2rem;
-          font-weight: 700;
-          margin: 0;
-          letter-spacing: 0.5px;
-          transition: all 0.5s ease;
-          position: relative;
-          z-index: 1;
-        }
-
-        .services .service-card:hover h4 {
-          color: var(--accent-color, #d4a574);
-        }
-
-        .services .service-card p {
-          color: rgba(255, 255, 255, 0.75);
-          font-size: 0.98rem;
-          margin: 0;
-          line-height: 1.6;
-          transition: all 0.5s ease;
-          position: relative;
-          z-index: 1;
-        }
-
-        .services .service-card:hover p {
-          color: rgba(255, 255, 255, 0.9);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 1199px) {
-          .services .service-card {
-            padding: 2rem 1.5rem;
-            border-radius: 1.1rem;
-          }
-
-          .services .service-icon {
-            width: 3.5rem;
-            height: 3.5rem;
-            font-size: 1.7rem;
-          }
-
-          .services .service-card h4 {
-            font-size: 1.1rem;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .services .service-card {
-            padding: 1.75rem 1.5rem;
-            gap: 1rem;
-            border-radius: 1rem;
-          }
-
-          .services .service-icon {
-            width: 3.25rem;
-            height: 3.25rem;
-            font-size: 1.5rem;
-          }
-
-          .services .service-card h4 {
-            font-size: 1.05rem;
-          }
-
-          .services .service-card p {
-            font-size: 0.93rem;
-          }
-
-          .services .service-card:hover {
-            transform: translateY(-10px) scale(1.01);
-          }
-        }
-
-        @media (max-width: 576px) {
-          .services .service-card {
-            padding: 1.5rem 1.25rem;
-            gap: 0.75rem;
-            border-radius: 0.95rem;
-          }
-
-          .services .service-icon {
-            width: 3rem;
-            height: 3rem;
-            font-size: 1.3rem;
-          }
-
-          .services .service-card h4 {
-            font-size: 1rem;
-          }
-
-          .services .service-card p {
-            font-size: 0.88rem;
-            line-height: 1.5;
-          }
-
-          .services .service-card:hover {
-            transform: translateY(-8px) scale(1.005);
-          }
-        }
-      </style>
+  <link rel="stylesheet" href="assets/css/custom.css">
 
   <!-- =======================================================
   * Template Name: Platia
@@ -269,7 +90,7 @@
 
       <div class="hero-background">
         <video autoplay muted playsinline loop >
-          <source src="assets/img/restaurant/video-4.mp4" type="video/mp4">
+          <source src="assets/img/restaurant/bg video.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
       </div>
@@ -278,9 +99,9 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
-              <span class="tagline">EST. 2024</span>
-              <h1 class="hero-title">Visuals<br>That Speak.</h1>
-              <p class="hero-description">Crafting unforgettable experiences with precision and passion.</p>
+              <span class="tagline">EST. 2023</span>
+              <h1 class="hero-title">Where Dreams Become Grand Celebrations.</h1>
+              <p class="hero-description">• Weddings • Corporate Events • Catering • Birthday Events • Stage Décor • Full Event Planning</p>
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
                 <a href="#" class="btn btn-primary">VIEW GALLERY</a>
@@ -293,203 +114,7 @@
 
       <style>
         /* Premium Hero Text Centering & Styling */
-        .hero {
-          min-height: 100vh;
-          height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-        }
-
-        .hero .hero-content {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          position: relative;
-          z-index: 2;
-        }
-
-        .hero .hero-text {
-          text-align: center;
-          max-width: 800px;
-        }
-
-        .hero .tagline {
-          display: block;
-          font-size: 0.95rem;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-          color: var(--accent-color, #d4a574);
-          font-weight: 600;
-          margin-bottom: 1.5rem;
-          animation: fadeInDown 1s ease;
-        }
-
-        .hero .hero-title {
-          font-size: 4.5rem;
-          font-weight: 700;
-          letter-spacing: -1px;
-          line-height: 1.1;
-          margin: 0 0 1.5rem 0;
-          color: white;
-          text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-          animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .hero .hero-description {
-          font-size: 1.15rem;
-          color: rgba(255, 255, 255, 0.85);
-          margin: 0 0 2.5rem 0;
-          line-height: 1.7;
-          max-width: 600px;
-          margin-left: auto;
-          margin-right: auto;
-          animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        .hero .hero-actions {
-          display: flex;
-          gap: 1.5rem;
-          justify-content: center;
-          flex-wrap: wrap;
-          animation: fadeInUp 1s ease 0.6s both;
-        }
-
-        .hero .btn {
-          padding: 0.95rem 2.5rem;
-          border-radius: 0;
-          font-weight: 600;
-          letter-spacing: 1.5px;
-          font-size: 0.9rem;
-          transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-          border: 2px solid var(--accent-color, #d4a574);
-          text-transform: uppercase;
-          position: relative;
-          overflow: hidden;
-        }
-
-        .hero .btn::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 100%;
-          height: 100%;
-          background: var(--accent-color, #d4a574);
-          transition: left 0.4s ease;
-          z-index: -1;
-        }
-
-        .hero .btn-primary {
-          background: var(--accent-color, #d4a574);
-          color: white;
-          border-color: var(--accent-color, #d4a574);
-        }
-
-        .hero .btn-primary:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 12px 28px rgba(212, 165, 116, 0.35);
-          color: white;
-        }
-
-        .hero .btn-outline {
-          background: transparent;
-          color: var(--accent-color, #d4a574);
-          border-color: var(--accent-color, #d4a574);
-        }
-
-        .hero .btn-outline:hover {
-          background: var(--accent-color, #d4a574);
-          color: white;
-          transform: translateY(-3px);
-          box-shadow: 0 12px 28px rgba(212, 165, 116, 0.35);
-        }
-
-        @keyframes fadeInDown {
-          from {
-            opacity: 0;
-            transform: translateY(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-          .hero {
-            min-height: 100vh;
-            height: 100vh;
-          }
-
-          .hero .hero-title {
-            font-size: 2.8rem;
-            margin-bottom: 1.2rem;
-          }
-
-          .hero .hero-description {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-          }
-
-          .hero .hero-actions {
-            gap: 1rem;
-          }
-
-          .hero .btn {
-            padding: 0.85rem 2rem;
-            font-size: 0.85rem;
-          }
-        }
-
-        @media (max-width: 576px) {
-          .hero {
-            min-height: 100vh;
-            height: 100vh;
-          }
-
-          .hero .hero-title {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-          }
-
-          .hero .tagline {
-            font-size: 0.8rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-          }
-
-          .hero .hero-description {
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-          }
-
-          .hero .hero-actions {
-            flex-direction: column;
-            gap: 0.75rem;
-          }
-
-          .hero .btn {
-            padding: 0.8rem 1.75rem;
-            font-size: 0.8rem;
-            width: 100%;
-          }
-        }
+        
       </style>
 
       <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.35rem; text-align:center; z-index:10;">
@@ -500,18 +125,7 @@
       </div>
 
       <style>
-        /* Responsive adjustments for the scroll indicator */
-        #hero .scroll-indicator { bottom: 3rem; }
-        @media (max-width: 768px) {
-          #hero .scroll-indicator { bottom: 2rem; }
-          #hero .scroll-indicator .scroll-text { font-size:0.9rem; }
-          #hero .scroll-indicator .scroll-arrow i { font-size:1.05rem; }
-        }
-        @media (max-width: 420px) {
-          #hero .scroll-indicator { bottom: 1.25rem; gap:.25rem; }
-          #hero .scroll-indicator .scroll-text { font-size:0.82rem; }
-          #hero .scroll-indicator .scroll-arrow i { font-size:0.95rem; }
-        }
+        
       </style>
 
     </section><!-- /Hero Section -->
@@ -536,8 +150,8 @@
               <div class="service-icon">
                 <i class="bi bi-list-check"></i>
               </div>
-              <h4>Event Planning</h4>
-              <p>End-to-end event coordination and seamless execution.</p>
+              <h4>Event Planning & Coordination</h4>
+              <p>We handle everything—from concept to completion. Farsha™ ensures a smooth, stress-free event with perfect timing, flawless arrangements, and expert coordination.</p>
             </div>
           </div>
 
@@ -547,8 +161,8 @@
               <div class="service-icon">
                 <i class="bi bi-cake2"></i>
               </div>
-              <h4>Wedding Catering</h4>
-              <p>Bespoke menus and exquisite service for your special day.</p>
+              <h4>Wedding Catering & Hospitality</h4>
+              <p>Celebrate your big day with flavours crafted to perfection. Our customized wedding menus, elegant serving style, and warm hospitality create an unforgettable dining experience.</p>
             </div>
           </div>
 
@@ -558,19 +172,19 @@
               <div class="service-icon">
                 <i class="bi bi-brightness-high"></i>
               </div>
-              <h4>Stage & Lighting</h4>
-              <p>Creating the perfect ambiance with professional setups.</p>
+              <h4>Stage, Lighting & Ambience Design</h4>
+              <p>From dramatic lighting to stunning stage setups, we create the atmosphere your celebration deserves—elegant, immersive, and picture-perfect.</p>
             </div>
           </div>
 
           <!-- Service Card 4 -->
-          <div class="col-lg-6 col-xl-3 col-6 data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-lg-6 col-xl-3 col-6 data-aos=" zoom-in data-aos-delay="300">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-flower1"></i>
               </div>
-              <h4>Decorations</h4>
-              <p>Thematic and elegant decor to transform any venue.</p>
+              <h4>Custom Décor & Theme Creations</h4>
+              <p>Every event should feel magical. Our décor specialists transform any venue with themes, colours, and details that match your vision beautifully.</p>
             </div>
           </div>
 
@@ -580,8 +194,8 @@
               <div class="service-icon">
                 <i class="bi bi-cone-striped"></i>
               </div>
-              <h4>Festive Catering</h4>
-              <p>Special menus and arrangements for all festive occasions.</p>
+              <h4>Festive & Traditional Catering</h4>
+              <p>Be it Eid, Onam, or any special celebration, our festive menus bring authentic flavours, freshness, and richness to your special gatherings.</p>
             </div>
           </div>
 
@@ -591,8 +205,8 @@
               <div class="service-icon">
                 <i class="bi bi-briefcase"></i>
               </div>
-              <h4>Corporate Events</h4>
-              <p>Professional and reliable catering for corporate functions.</p>
+              <h4>Corporate Catering & Event Support</h4>
+              <p>From board meetings to large corporate events, we deliver professional, timely, and high-quality catering with a service experience that reflects your brand.</p>
             </div>
           </div>
 
@@ -602,8 +216,8 @@
               <div class="service-icon">
                 <i class="bi bi-house"></i>
               </div>
-              <h4>Birthday Functions</h4>
-              <p>Personalized services for memorable private parties.</p>
+              <h4>Birthday & Private Celebrations</h4>
+              <p>Make your special moments unforgettable with themed decorations, customised menus, and dedicated hosting—perfect for birthdays and intimate gatherings.</p>
             </div>
           </div>
 
@@ -613,8 +227,8 @@
               <div class="service-icon">
                 <i class="bi bi-people"></i>
               </div>
-              <h4>Full Crew & Mgmt</h4>
-              <p>A complete, professional service team at your disposal.</p>
+              <h4>Full Crew & Event Management Team</h4>
+              <p>Our trained professionals manage everything on the ground—serving, coordination, backstage support, logistics, guest handling, and more—so you can relax and enjoy your event.</p>
             </div>
           </div>
 
@@ -629,9 +243,9 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">&nbsp;About</span>
-        <h2>About</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">&nbsp;About Us</span>
+        <h2>About Us</h2>
+        <p>We ensure every need is fulfilled with care, quality, and complete dedication.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -640,28 +254,30 @@
           <div class="col-lg-6" data-aos="fade-up">
             <div class="about-content">
               <h2  class="special-font">#Experience Our Unique Approach</h2>
-              <p class="fst-italic">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</p>
+              <p class="fst-italic">Discover how Farsha™ blends creativity, precision, and passion to craft events that feel effortless and unforgettable. Every detail is planned with purpose—designed to bring your vision to life with elegance.</p>
 
-              <div class="row mt-4">
-                <div class="col-md-6">
-                  <div class="feature-item" data-aos="fade-up" data-aos-delay="150">
-                    <i class="bi bi-award"></i>
-                    <h4>Exceptional Service</h4>
-                    <p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue.</p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                    <i class="bi bi-trophy"></i>
-                    <h4>Industry Recognition</h4>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-                  </div>
-                </div>
-              </div>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="feature-item" data-aos="fade-up" data-aos-delay="150">
+      <i class="bi bi-award"></i>
+      <h4>Exceptional Service</h4>
+      <p>We deliver flawlessly planned events with unmatched quality, care, and attention to detail.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+      <i class="bi bi-trophy"></i>
+      <h4>Industry Recognition</h4>
+      <p>Honored as a leading event company, we consistently set new standards in excellence and creativity.</p>
+    </div>
+  </div>
+</div>
+
 
               <div class="signature mt-4" data-aos="fade-up" data-aos-delay="250">
-                <p class="chef-name">Jane Smith, Head of Operations</p>
-                <img src="assets/img/misc/signature-1.png" alt="Chef Signature" class="img-fluid">
+                <p class="chef-name">Marwan, Founder & CEO</p>
+                <img src="assets/img/misc/sign.png" alt="Chef Signature" class="img-fluid">
               </div>
             </div>
           </div>
@@ -670,17 +286,17 @@
             <div class="about-gallery">
               <div class="row g-3">
                 <div class="col-6">
-                  <img src="assets/img/restaurant/showcase-3.webp" class="img-fluid rounded" alt="Restaurant Image">
+                  <img src="assets/img/restaurant/img2.png" class="img-fluid rounded" alt="Restaurant Image">
                 </div>
                 <div class="col-6">
-                  <img src="assets/img/restaurant/showcase-8.webp" class="img-fluid rounded" alt="Restaurant Image">
+                  <img src="assets/img/restaurant/img3.png" class="img-fluid rounded" alt="Restaurant Image">
                 </div>
                 <div class="col-12 mt-3">
                   <div class="years-badge">
-                    <span class="number">18</span>
+                    <span class="number">2+</span>
                     <span class="text">Years of Dedication</span>
                   </div>
-                  <img src="assets/img/restaurant/showcase-6.webp" class="img-fluid rounded" alt="Restaurant Image">
+                  <img src="assets/img/restaurant/img1.png" class="img-fluid rounded" alt="Restaurant Image">
                 </div>
               </div>
             </div>
