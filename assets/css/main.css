@@ -4003,14 +4003,7 @@ section,
 # Premium Custom Mouse Pointer
 --------------------------------------------------------------*/
 
-/* Hide default cursor on desktop */
-@media (min-width: 769px) {
-  * {
-    cursor: none !important;
-  }
-}
-
-/* Custom Cursor Container */
+/* Custom Cursor Container - Desktop Only */
 .cursor-container {
   position: fixed;
   top: 0;
@@ -4022,9 +4015,14 @@ section,
   display: none;
 }
 
+/* Show cursor only on desktop (min 769px) */
 @media (min-width: 769px) {
   .cursor-container {
     display: block;
+  }
+
+  * {
+    cursor: none !important;
   }
 }
 
@@ -4089,11 +4087,13 @@ section,
 
 
 
-/* Mobile Devices - Hide Custom Cursor */
+/* Mobile Devices - Completely Hide Custom Cursor */
 @media (max-width: 768px) {
   .cursor-container,
   .cursor-pointer {
     display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 
   * {

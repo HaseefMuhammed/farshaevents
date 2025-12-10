@@ -207,8 +207,11 @@
    * Premium Custom Mouse Pointer
    */
   function initCustomCursor() {
-    // Check if device is not mobile/tablet (viewport width > 768px)
-    if (window.innerWidth <= 768) {
+    // Check if device is mobile/tablet - DO NOT show cursor
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isSmallScreen = window.innerWidth <= 768;
+    
+    if (isMobile || isSmallScreen) {
       return;
     }
 
@@ -265,11 +268,19 @@
   // Reinitialize on window resize to check if still on desktop
   window.addEventListener('resize', () => {
     const cursorContainer = document.querySelector('.cursor-container');
-    if (window.innerWidth <= 768) {
-      if (cursorContainer) cursorContainer.style.display = 'none';
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isSmallScreen = window.innerWidth <= 768;
+    
+    if (isMobile || isSmallScreen) {
+      if (cursorContainer) {
+        cursorContainer.remove();
+      }
     } else {
-      if (cursorContainer) cursorContainer.style.display = 'block';
-      else initCustomCursor();
+      if (cursorContainer) {
+        cursorContainer.style.display = 'block';
+      } else {
+        initCustomCursor();
+      }
     }
   });
 
