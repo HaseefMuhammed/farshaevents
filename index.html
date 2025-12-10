@@ -227,10 +227,8 @@
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
     </div><!-- End Top Bar -->
@@ -286,7 +284,7 @@
     <section id="hero" class="hero section dark-background" style="position:relative;">
 
       <div class="hero-background">
-        <video autoplay="" muted="" loop="" playsinline="">
+        <video autoplay muted playsinline loop >
           <source src="assets/img/restaurant/video-4.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
@@ -294,20 +292,221 @@
 
       <div class="container hero-content">
         <div class="row">
-          <div class="align-items-cente r d-flex justify-content-center">
+          <div class="col-lg-10 offset-lg-1">
             <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
-              <span class="tagline">Experience Culinary Excellence</span>
-              <h1 class="hero-title">#Savor Every Moment at Platia</h1>
-              <p class="hero-description">Indulge in authentic Italian cuisine crafted with passion and the finest ingredients. From traditional recipes passed down through generations to innovative culinary creations, we offer an unforgettable dining experience.</p>
+              <span class="tagline">EST. 2024</span>
+              <h1 class="hero-title">Visuals<br>That Speak.</h1>
+              <p class="hero-description">Crafting unforgettable experiences with precision and passion.</p>
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-                <a href="#" class="btn btn-primary">Explore services</a>
-                <a href="#" class="btn btn-outline">Get in touch</a>
+                <a href="#" class="btn btn-primary">VIEW GALLERY</a>
+                <a href="#" class="btn btn-outline">GET IN TOUCH</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <style>
+        /* Premium Hero Text Centering & Styling */
+        .hero {
+          min-height: 100vh;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        }
+
+        .hero .hero-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          position: relative;
+          z-index: 2;
+        }
+
+        .hero .hero-text {
+          text-align: center;
+          max-width: 800px;
+        }
+
+        .hero .tagline {
+          display: block;
+          font-size: 0.95rem;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: var(--accent-color, #d4a574);
+          font-weight: 600;
+          margin-bottom: 1.5rem;
+          animation: fadeInDown 1s ease;
+        }
+
+        .hero .hero-title {
+          font-size: 4.5rem;
+          font-weight: 700;
+          letter-spacing: -1px;
+          line-height: 1.1;
+          margin: 0 0 1.5rem 0;
+          color: white;
+          text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+          animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero .hero-description {
+          font-size: 1.15rem;
+          color: rgba(255, 255, 255, 0.85);
+          margin: 0 0 2.5rem 0;
+          line-height: 1.7;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+          animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero .hero-actions {
+          display: flex;
+          gap: 1.5rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero .btn {
+          padding: 0.95rem 2.5rem;
+          border-radius: 0;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+          font-size: 0.9rem;
+          transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+          border: 2px solid var(--accent-color, #d4a574);
+          text-transform: uppercase;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hero .btn::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: var(--accent-color, #d4a574);
+          transition: left 0.4s ease;
+          z-index: -1;
+        }
+
+        .hero .btn-primary {
+          background: var(--accent-color, #d4a574);
+          color: white;
+          border-color: var(--accent-color, #d4a574);
+        }
+
+        .hero .btn-primary:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 28px rgba(212, 165, 116, 0.35);
+          color: white;
+        }
+
+        .hero .btn-outline {
+          background: transparent;
+          color: var(--accent-color, #d4a574);
+          border-color: var(--accent-color, #d4a574);
+        }
+
+        .hero .btn-outline:hover {
+          background: var(--accent-color, #d4a574);
+          color: white;
+          transform: translateY(-3px);
+          box-shadow: 0 12px 28px rgba(212, 165, 116, 0.35);
+        }
+
+        @keyframes fadeInDown {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .hero {
+            min-height: 100vh;
+            height: 100vh;
+          }
+
+          .hero .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+          }
+
+          .hero .hero-description {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+          }
+
+          .hero .hero-actions {
+            gap: 1rem;
+          }
+
+          .hero .btn {
+            padding: 0.85rem 2rem;
+            font-size: 0.85rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .hero {
+            min-height: 100vh;
+            height: 100vh;
+          }
+
+          .hero .hero-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+          }
+
+          .hero .tagline {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+          }
+
+          .hero .hero-description {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+          }
+
+          .hero .hero-actions {
+            flex-direction: column;
+            gap: 0.75rem;
+          }
+
+          .hero .btn {
+            padding: 0.8rem 1.75rem;
+            font-size: 0.8rem;
+            width: 100%;
+          }
+        }
+      </style>
 
       <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.35rem; text-align:center; z-index:10;">
         <div class="scroll-text" style="font-size:0.95rem;">Scroll to Explore</div>
@@ -348,7 +547,7 @@
         <div class="row g-4">
 
           <!-- Service Card 1 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="150">
+          <div class="col-lg-6 col-xl-3 col-6" data-aos="zoom-in" data-aos-delay="150">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-list-check"></i>
@@ -359,7 +558,7 @@
           </div>
 
           <!-- Service Card 2 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-lg-6 col-xl-3 col-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-cake2"></i>
@@ -370,7 +569,7 @@
           </div>
 
           <!-- Service Card 3 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="250">
+          <div class="col-lg-6 col-xl-3 col-6" data-aos="zoom-in" data-aos-delay="250">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-brightness-high"></i>
@@ -381,7 +580,7 @@
           </div>
 
           <!-- Service Card 4 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-lg-6 col-xl-3 col-6 data-aos="zoom-in" data-aos-delay="300">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-flower1"></i>
@@ -392,7 +591,7 @@
           </div>
 
           <!-- Service Card 5 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="350">
+          <div class="col-lg-6 col-xl-3 col-6" data-aos="zoom-in" data-aos-delay="350">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-cone-striped"></i>
@@ -403,7 +602,7 @@
           </div>
 
           <!-- Service Card 6 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="col-lg-6 col-xl-3 col-6 data-aos="zoom-in" data-aos-delay="400">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-briefcase"></i>
@@ -414,7 +613,7 @@
           </div>
 
           <!-- Service Card 7 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="450">
+          <div class="col-lg-6 col-xl-3 col-6" data-aos="zoom-in" data-aos-delay="450">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-house"></i>
@@ -425,7 +624,7 @@
           </div>
 
           <!-- Service Card 8 -->
-          <div class="col-lg-6 col-xl-3" data-aos="zoom-in" data-aos-delay="500">
+          <div class="col-lg-6 col-xl-3 col-6" data-aos="zoom-in" data-aos-delay="500">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-people"></i>
@@ -456,9 +655,8 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6" data-aos="fade-up">
             <div class="about-content">
-              <h2>Experience Our Unique Approach</h2>
+              <h2  class="special-font">#Experience Our Unique Approach</h2>
               <p class="fst-italic">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper.</p>
-              <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.</p>
 
               <div class="row mt-4">
                 <div class="col-md-6">
@@ -479,7 +677,7 @@
 
               <div class="signature mt-4" data-aos="fade-up" data-aos-delay="250">
                 <p class="chef-name">Jane Smith, Head of Operations</p>
-                <img src="assets/img/misc/signature-1.webp" alt="Chef Signature" class="img-fluid">
+                <img src="assets/img/misc/signature-1.png" alt="Chef Signature" class="img-fluid">
               </div>
             </div>
           </div>
@@ -508,6 +706,140 @@
       </div>
 
     </section><!-- /About Section -->
+
+     <!-- Events Section -->
+    <section id="events" class="events section light-background">
+
+      <!-- Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
+          <div class="row align-items-center">
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
+              <div class="awards-content">
+                <h3>Recognition &amp; Awards</h3>
+                <p>At enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
+              <div class="awards-grid">
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-trophy-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Best Restaurant 2024</h4>
+                    <span>City Dining Awards</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>5-Star Rating</h4>
+                    <span>Local Food Guide</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-gem"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Excellence Award</h4>
+                    <span>Culinary Institute</span>
+                  </div>
+                </div>
+                <div class="award-item">
+                  <div class="award-icon">
+                    <i class="bi bi-heart-fill"></i>
+                  </div>
+                  <div class="award-details">
+                    <h4>Customer Choice</h4>
+                    <span>Community Favorite</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="community-section" data-aos="fade-up" data-aos-delay="200">
+          <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="250">
+              <div class="community-card">
+                <div class="community-header">
+                  <div class="community-icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div>
+                    <h3>Community Involvement</h3>
+                    <p>Supporting local farmers and charities since 2015</p>
+                  </div>
+                </div>
+                <div class="community-stats">
+                  <div class="stat-row">
+                    <div class="stat-item">
+                      <span class="stat-number">$50K+</span>
+                      <span class="stat-label">Donated to Local Charities</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number">25+</span>
+                      <span class="stat-label">Local Farm Partners</span>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <div class="stat-item">
+                      <span class="stat-number">100+</span>
+                      <span class="stat-label">Community Events Hosted</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number">500+</span>
+                      <span class="stat-label">Volunteer Hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+              <div class="sustainability-card">
+                <div class="sustainability-header">
+                  <div class="sustainability-icon">
+                    <i class="bi bi-recycle"></i>
+                  </div>
+                  <div>
+                    <h3>Eco-Friendly Practices</h3>
+                    <p>Committed to sustainable dining and zero waste</p>
+                  </div>
+                </div>
+                <div class="sustainability-features">
+                  <div class="feature-item">
+                    <i class="bi bi-leaf-fill"></i>
+                    <span>100% Compostable Packaging</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-water"></i>
+                    <span>Water Conservation Program</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-lightning-fill"></i>
+                    <span>Renewable Energy Powered</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="bi bi-truck"></i>
+                    <span>Local Sourcing Priority</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
 
     <!-- Menu Section -->
     <section id="menu" class="menu section">
@@ -928,7 +1260,7 @@
             <figure class="chef-photo m-0">
               <img src="assets/img/restaurant/chef-4.webp" alt="Executive chef portrait" class="img-fluid">
               <div class="badge-overlay">
-                <span class="pill"><i class="bi bi-star-fill me-1"></i> Michelin Mention</span>
+                <span class="pill text-black"><i class="bi bi-star-fill me-1"></i> Michelin Mention</span>
               </div>
             </figure>
           </div>
@@ -950,7 +1282,7 @@
               </ul>
 
               <div class="signature">
-                <img src="assets/img/misc/signature-1.webp" alt="Chef signature" class="img-fluid">
+                <img src="assets/img/misc/signature-1.png" alt="Chef signature" class="img-fluid">
               </div>
             </div>
           </div>
@@ -1267,139 +1599,7 @@
 
     </section><!-- /Location Section -->
 
-    <!-- Events Section -->
-    <section id="events" class="events section light-background">
-
-      <!-- Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
-          <div class="row align-items-center">
-            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
-              <div class="awards-content">
-                <h3>Recognition &amp; Awards</h3>
-                <p>At enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
-              <div class="awards-grid">
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-trophy-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Best Restaurant 2024</h4>
-                    <span>City Dining Awards</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>5-Star Rating</h4>
-                    <span>Local Food Guide</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-gem"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Excellence Award</h4>
-                    <span>Culinary Institute</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-heart-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Customer Choice</h4>
-                    <span>Community Favorite</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="community-section" data-aos="fade-up" data-aos-delay="200">
-          <div class="row g-4">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="250">
-              <div class="community-card">
-                <div class="community-header">
-                  <div class="community-icon">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <div>
-                    <h3>Community Involvement</h3>
-                    <p>Supporting local farmers and charities since 2015</p>
-                  </div>
-                </div>
-                <div class="community-stats">
-                  <div class="stat-row">
-                    <div class="stat-item">
-                      <span class="stat-number">$50K+</span>
-                      <span class="stat-label">Donated to Local Charities</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number">25+</span>
-                      <span class="stat-label">Local Farm Partners</span>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <div class="stat-item">
-                      <span class="stat-number">100+</span>
-                      <span class="stat-label">Community Events Hosted</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number">500+</span>
-                      <span class="stat-label">Volunteer Hours</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-              <div class="sustainability-card">
-                <div class="sustainability-header">
-                  <div class="sustainability-icon">
-                    <i class="bi bi-recycle"></i>
-                  </div>
-                  <div>
-                    <h3>Eco-Friendly Practices</h3>
-                    <p>Committed to sustainable dining and zero waste</p>
-                  </div>
-                </div>
-                <div class="sustainability-features">
-                  <div class="feature-item">
-                    <i class="bi bi-leaf-fill"></i>
-                    <span>100% Compostable Packaging</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-water"></i>
-                    <span>Water Conservation Program</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-lightning-fill"></i>
-                    <span>Renewable Energy Powered</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-truck"></i>
-                    <span>Local Sourcing Priority</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Events Section -->
+   
 
     <!-- Gallery Section -->
     <section id="gallery" class="gallery section">
