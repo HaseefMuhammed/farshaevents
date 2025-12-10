@@ -3999,6 +3999,108 @@ section,
   transition: all 0.3s ease;
 }
 
+/*--------------------------------------------------------------
+# Premium Custom Mouse Pointer
+--------------------------------------------------------------*/
+
+/* Hide default cursor on desktop */
+@media (min-width: 769px) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Custom Cursor Container */
+.cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 99999;
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .cursor-container {
+    display: block;
+  }
+}
+
+/* Premium Custom Single Cursor */
+.cursor-pointer {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #D4AF37;
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+  pointer-events: none;
+  z-index: 100000;
+  background: radial-gradient(circle, rgba(212, 165, 116, 0.2), rgba(212, 165, 116, 0));
+  box-shadow: inset 0 0 10px rgba(212, 165, 116, 0.3), 0 0 15px rgba(212, 165, 116, 0.4);
+  transition: all 0.2s ease-out;
+  animation: cursor-glow 2s infinite;
+}
+
+.cursor-pointer.active {
+  width: 28px;
+  height: 28px;
+  top: -14px;
+  left: -14px;
+  border-color: #FFD700;
+  background: radial-gradient(circle, rgba(212, 165, 116, 0.4), rgba(212, 165, 116, 0));
+  box-shadow: inset 0 0 15px rgba(212, 165, 116, 0.5), 0 0 30px rgba(212, 165, 116, 0.8);
+  animation: none;
+}
+
+/* Cursor Dot Center */
+.cursor-pointer::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(135deg, #D4AF37, #E8D7B2);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px rgba(212, 165, 116, 0.8);
+}
+
+.cursor-pointer.active::before {
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #FFD700, #D4AF37);
+  box-shadow: 0 0 15px rgba(212, 165, 116, 1);
+}
+
+/* Smooth cursor pulse animation */
+@keyframes cursor-glow {
+  0%, 100% {
+    box-shadow: inset 0 0 10px rgba(212, 165, 116, 0.3), 0 0 15px rgba(212, 165, 116, 0.4);
+  }
+  50% {
+    box-shadow: inset 0 0 15px rgba(212, 165, 116, 0.5), 0 0 25px rgba(212, 165, 116, 0.6);
+  }
+}
+
+
+
+/* Mobile Devices - Hide Custom Cursor */
+@media (max-width: 768px) {
+  .cursor-container,
+  .cursor-pointer {
+    display: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+}
+
 .error-404 .helpful-links .link-item span {
   font-size: 16px;
   font-weight: 400;

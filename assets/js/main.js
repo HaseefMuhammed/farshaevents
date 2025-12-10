@@ -203,4 +203,74 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Premium Custom Mouse Pointer
+   */
+  function initCustomCursor() {
+    // Check if device is not mobile/tablet (viewport width > 768px)
+    if (window.innerWidth <= 768) {
+      return;
+    }
+
+    // Create single cursor element
+    const cursorPointer = document.createElement('div');
+    cursorPointer.classList.add('cursor-pointer');
+    
+    const cursorContainer = document.createElement('div');
+    cursorContainer.classList.add('cursor-container');
+    cursorContainer.appendChild(cursorPointer);
+    document.body.appendChild(cursorContainer);
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    // Track mouse movement
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      // Update cursor position
+      cursorPointer.style.left = mouseX + 'px';
+      cursorPointer.style.top = mouseY + 'px';
+    });
+
+    // Detect interactive elements
+    const interactiveElements = document.querySelectorAll(
+      'a, button, input, textarea, select, [role="button"], .btn, .clickable'
+    );
+
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursorPointer.classList.add('active');
+      });
+
+      el.addEventListener('mouseleave', () => {
+        cursorPointer.classList.remove('active');
+      });
+    });
+
+    // Hide cursor when mouse leaves window
+    document.addEventListener('mouseleave', () => {
+      cursorContainer.style.display = 'none';
+    });
+
+    document.addEventListener('mouseenter', () => {
+      cursorContainer.style.display = 'block';
+    });
+  }
+
+  // Initialize custom cursor on load
+  window.addEventListener('load', initCustomCursor);
+  
+  // Reinitialize on window resize to check if still on desktop
+  window.addEventListener('resize', () => {
+    const cursorContainer = document.querySelector('.cursor-container');
+    if (window.innerWidth <= 768) {
+      if (cursorContainer) cursorContainer.style.display = 'none';
+    } else {
+      if (cursorContainer) cursorContainer.style.display = 'block';
+      else initCustomCursor();
+    }
+  });
+
 })();
