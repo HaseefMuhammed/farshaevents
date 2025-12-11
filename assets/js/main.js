@@ -319,4 +319,77 @@
 
   window.addEventListener('load', initFlatpickr);
 
+  /**
+   * FAQ Toggle Animation
+   */
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+  });
+
+  /**
+   * Number Counter Animation
+   */
+  function animateCounter() {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200;
+
+    counters.forEach(counter => {
+      const target = parseInt(counter.innerText);
+      const increment = target / speed;
+      let count = 0;
+
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = Math.ceil(count) + (counter.innerText.includes('+') ? '+' : counter.innerText.includes('%') ? '%' : '');
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = counter.dataset.target || target + (counter.innerText.includes('+') ? '+' : counter.innerText.includes('%') ? '%' : '');
+        }
+      };
+
+      updateCount();
+    });
+  }
+
+  // Trigger counter animation when section is in view
+  const observerOptions = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target.classList.contains('hero-stats')) {
+        animateCounter();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const heroStats = document.querySelector('.hero-stats');
+  if (heroStats) {
+    observer.observe(heroStats);
+  }
+
+  /**
+   * Smooth scroll to sections
+   */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && document.querySelector(href)) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        const offsetTop = target.offsetTop - 80;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
 })();
