@@ -284,4 +284,39 @@
     }
   });
 
+  /**
+   * Init Flatpickr date/time pickers for reservation form
+   */
+  function initFlatpickr() {
+    if (typeof flatpickr === 'undefined') return;
+
+    // Date picker
+    const dateEl = document.querySelector('#event-date');
+    if (dateEl) {
+      flatpickr(dateEl, {
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
+        minDate: "today",
+        disableMobile: true
+      });
+    }
+
+    // Time picker
+    const timeEl = document.querySelector('#event-time');
+    if (timeEl) {
+      flatpickr(timeEl, {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: false,
+        altInput: true,
+        altFormat: "h:i K",
+        disableMobile: true
+      });
+    }
+  }
+
+  window.addEventListener('load', initFlatpickr);
+
 })();

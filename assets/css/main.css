@@ -4183,3 +4183,25 @@ section,
 .icon-nav{
   width: 3.3em !important;
 }
+
+/* Flatpickr theme overrides to match site colors */
+.flatpickr-input[readonly] { cursor: pointer; }
+.flatpickr-calendar {
+  background: var(--surface-color);
+  color: var(--default-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.flatpickr-months, .flatpickr-weekdays { color: var(--default-color); }
+.flatpickr-weekday { color: color-mix(in srgb, var(--default-color), transparent 40%); }
+.flatpickr-day:hover { background: color-mix(in srgb, var(--accent-color), transparent 92%); }
+.flatpickr-day.today { box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 50%); }
+.flatpickr-day.selected, .flatpickr-day.selected.start, .flatpickr-day.selected.end { background: var(--accent-color); color: var(--contrast-color); }
+.flatpickr-time .flatpickr-time-separator, .flatpickr-current-month { color: var(--default-color); }
+.flatpickr-input[aria-expanded="true"] { outline: none; }
+
+/* footer branding */
+
+.sitename img{
+  width: 2.3em;
+}

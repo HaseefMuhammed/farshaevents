@@ -27,6 +27,8 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Flatpickr (lightweight date/time picker) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <!-- =======================================================
   * Template Name: Platia
@@ -104,18 +106,13 @@
               <p class="hero-description">• Weddings • Corporate Events • Catering • Birthday Events • Stage Décor • Full Event Planning</p>
 
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
-                <a href="#" class="btn btn-primary">VIEW GALLERY</a>
-                <a href="#" class="btn btn-outline">GET IN TOUCH</a>
+                <a href="#gallery" class="btn btn-primary">VIEW GALLERY</a>
+                <a href="#contact" class="btn btn-outline">GET IN TOUCH</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style>
-        /* Premium Hero Text Centering & Styling */
-        
-      </style>
 
       <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400" style="position:absolute; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:.35rem; text-align:center; z-index:10;">
         <div class="scroll-text" style="font-size:0.95rem;">Scroll to Explore</div>
@@ -200,7 +197,7 @@
           </div>
 
           <!-- Service Card 6 -->
-          <div class="col-lg-6 col-xl-3 col-6 data-aos="zoom-in" data-aos-delay="400">
+          <div class="col-lg-6 col-xl-3 col-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-briefcase"></i>
@@ -314,130 +311,155 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
-          <div class="row align-items-center">
-            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
-              <div class="awards-content">
-                <h3>Recognition &amp; Awards</h3>
-                <p>At enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div>
-            </div>
-            <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
-              <div class="awards-grid">
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-trophy-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Best Restaurant 2024</h4>
-                    <span>City Dining Awards</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>5-Star Rating</h4>
-                    <span>Local Food Guide</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-gem"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Excellence Award</h4>
-                    <span>Culinary Institute</span>
-                  </div>
-                </div>
-                <div class="award-item">
-                  <div class="award-icon">
-                    <i class="bi bi-heart-fill"></i>
-                  </div>
-                  <div class="award-details">
-                    <h4>Customer Choice</h4>
-                    <span>Community Favorite</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- Awards Section -->
+  <div class="awards-section" data-aos="fade-up" data-aos-delay="200">
+    <div class="row align-items-center">
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="250">
+        <div class="awards-content">
+          <h3>Recognition & Achievements</h3>
+          <p>Honored for our dedication to crafting unforgettable celebrations with creativity, precision, and unmatched service excellence.</p>
         </div>
-
-        <div class="community-section" data-aos="fade-up" data-aos-delay="200">
-          <div class="row g-4">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="250">
-              <div class="community-card">
-                <div class="community-header">
-                  <div class="community-icon">
-                    <i class="bi bi-people-fill"></i>
-                  </div>
-                  <div>
-                    <h3>Community Involvement</h3>
-                    <p>Supporting local farmers and charities since 2015</p>
-                  </div>
-                </div>
-                <div class="community-stats">
-                  <div class="stat-row">
-                    <div class="stat-item">
-                      <span class="stat-number">$50K+</span>
-                      <span class="stat-label">Donated to Local Charities</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number">25+</span>
-                      <span class="stat-label">Local Farm Partners</span>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <div class="stat-item">
-                      <span class="stat-number">100+</span>
-                      <span class="stat-label">Community Events Hosted</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number">500+</span>
-                      <span class="stat-label">Volunteer Hours</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-              <div class="sustainability-card">
-                <div class="sustainability-header">
-                  <div class="sustainability-icon">
-                    <i class="bi bi-recycle"></i>
-                  </div>
-                  <div>
-                    <h3>Eco-Friendly Practices</h3>
-                    <p>Committed to sustainable dining and zero waste</p>
-                  </div>
-                </div>
-                <div class="sustainability-features">
-                  <div class="feature-item">
-                    <i class="bi bi-leaf-fill"></i>
-                    <span>100% Compostable Packaging</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-water"></i>
-                    <span>Water Conservation Program</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-lightning-fill"></i>
-                    <span>Renewable Energy Powered</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="bi bi-truck"></i>
-                    <span>Local Sourcing Priority</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <div class="col-lg-8" data-aos="fade-left" data-aos-delay="300">
+        <div class="awards-grid">
+
+          <div class="award-item">
+            <div class="award-icon">
+              <i class="bi bi-award-fill"></i>
+            </div>
+            <div class="award-details">
+              <h4>Best Event Management 2025</h4>
+              <span>National Excellence Award</span>
+            </div>
+          </div>
+
+          <div class="award-item">
+            <div class="award-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+            <div class="award-details">
+              <h4>Top-Rated Wedding Planner</h4>
+              <span>Kerala Event Council</span>
+            </div>
+          </div>
+
+          <div class="award-item">
+            <div class="award-icon">
+              <i class="bi bi-gem"></i>
+            </div>
+            <div class="award-details">
+              <h4>Excellence in Design</h4>
+              <span>Creative Stage Décor Award</span>
+            </div>
+          </div>
+
+          <div class="award-item">
+            <div class="award-icon">
+              <i class="bi bi-heart-fill"></i>
+            </div>
+            <div class="award-details">
+              <h4>Client Choice Award</h4>
+              <span>Most Loved Event Company</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Section -->
+  <div class="community-section" data-aos="fade-up" data-aos-delay="200">
+    <div class="row g-4">
+
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="250">
+        <div class="community-card">
+          <div class="community-header">
+            <div class="community-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div>
+              <h3>Community Engagement</h3>
+              <p>Proudly supporting local talents, vendors, and communities through impactful collaborations.</p>
+            </div>
+          </div>
+
+          <div class="community-stats">
+            <div class="stat-row">
+
+              <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">Local Vendors Supported</span>
+              </div>
+
+              <div class="stat-item">
+                <span class="stat-number">80+</span>
+                <span class="stat-label">Community Events Managed</span>
+              </div>
+
+            </div>
+
+            <div class="stat-row">
+              <div class="stat-item">
+                <span class="stat-number">5000+</span>
+                <span class="stat-label">Happy Families Served</span>
+              </div>
+
+              <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Collaborations with Artists</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Sustainability Section -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+        <div class="sustainability-card">
+          <div class="sustainability-header">
+            <div class="sustainability-icon">
+              <i class="bi bi-brightness-high-fill"></i>
+            </div>
+            <div>
+              <h3>Sustainable Event Practices</h3>
+              <p>Creating celebrations responsibly with eco-conscious planning and mindful resource use.</p>
+            </div>
+          </div>
+
+          <div class="sustainability-features">
+
+            <div class="feature-item">
+              <i class="bi bi-recycle"></i>
+              <span>Eco-Friendly Decorations</span>
+            </div>
+
+            <div class="feature-item">
+              <i class="bi bi-leaf-fill"></i>
+              <span>Reduced Waste Catering Processes</span>
+            </div>
+
+            <div class="feature-item">
+              <i class="bi bi-lightning-fill"></i>
+              <span>Energy-Efficient Lighting Systems</span>
+            </div>
+
+            <div class="feature-item">
+              <i class="bi bi-cloud-upload-fill"></i>
+              <span>Digital Invitations & Paperless Planning</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
 
     </section><!-- /Events Section -->
 
@@ -872,10 +894,10 @@
                           <input type="tel" class="form-control" name="phone" placeholder="Phone Number" required="">
                         </div>
                         <div class="col-6">
-                          <input type="date" name="date" class="form-control" required="">
+                          <input type="text" id="event-date" name="date" class="form-control" placeholder="Select date" readonly required>
                         </div>
                         <div class="col-6">
-                          <input type="time" class="form-control" name="time" required="">
+                          <input type="text" id="event-time" class="form-control" name="time" placeholder="Select time" readonly required>
                         </div>
                         <div class="col-12">
                           <input type="text" class="form-control" name="program" placeholder="Occasion" required="">
@@ -902,10 +924,10 @@
                 <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
                   <div class="reservation-info-section">
                     <div class="hero-image">
-                      <img src="assets/img/restaurant/showcase-2.webp" alt="Restaurant dining area" class="img-fluid">
+                      <img src="assets/img/restaurant/img4.png" alt="Restaurant dining area" class="img-fluid">
                       <div class="overlay-content">
-                        <h4>Experience Fine Dining</h4>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <h4>Where Every Moment Becomes a Memory</h4>
+                        <p>From décor to dining, we create experiences filled with beauty, joy, and perfection.</p>
                       </div>
                     </div>
 
@@ -918,11 +940,16 @@
                             </div>
                             <div class="card-content">
                               <h5>Business Hours</h5>
-                              <p>Tuesday - Thursday: 5:00 PM - 10:00 PM<br>
-                                Friday - Saturday: 5:00 PM - 11:00 PM<br>
-                                Sunday: 4:00 PM - 9:00 PM<br>
-                                <em>Closed Mondays</em>
+                              <p>
+                                Monday: 7:00 AM – 10:30 PM<br>
+                                Tuesday: 7:00 AM – 10:30 PM<br>
+                                Wednesday: 7:00 AM – 10:30 PM<br>
+                                Thursday: 7:00 AM – 10:30 PM<br>
+                                Friday: 7:00 AM – 10:30 PM<br>
+                                Saturday: 7:00 AM – 10:30 PM<br>
+                                Sunday: 7:00 AM – 10:30 PM
                               </p>
+
                             </div>
                           </div>
                         </div>
@@ -934,8 +961,10 @@
                             </div>
                             <div class="card-content">
                               <h5>Find Us</h5>
-                              <p>4567 Elm Avenue, Floor 2<br>
-                                Chicago, IL 60614</p>
+                              <p>
+                                Mundumuzhi, Vazhakkad<br>
+                                Kerala – 673640
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -945,12 +974,14 @@
                             <div class="card-icon">
                               <i class="bi bi-telephone-fill"></i>
                             </div>
-                            <div class="card-content">
-                              <h5>Reservations</h5>
-                              <p>+1 (312) 555-9876<br>
-                                <small>Available daily 2:00 PM - 9:00 PM</small>
-                              </p>
-                            </div>
+                          <div class="card-content">
+                            <h5>Reservations</h5>
+                            <p>
+                              <a href="tel:9562462115" target="_blank">+91 95624 62115</a><br>
+                              <small>Available daily for event enquiries</small>
+                            </p>
+                          </div>
+
                           </div>
                         </div>
 
@@ -959,12 +990,16 @@
                             <div class="card-icon">
                               <i class="bi bi-envelope-fill"></i>
                             </div>
-                            <div class="card-content">
-                              <h5>Email Us</h5>
-                              <p>reservations@example.com<br>
-                                <small>Response within 24 hours</small>
-                              </p>
-                            </div>
+                          <div class="card-content">
+                            <h5>Email Us</h5>
+                            <p>
+                              <a href="mailto:farshaeventandcatering@gmail.com" target="_blank">
+                                farshaeventandcatering@gmail.com
+                              </a><br>
+                              <small>Response within 24 hours</small>
+                            </p>
+                          </div>
+
                           </div>
                         </div>
                       </div>
@@ -973,7 +1008,7 @@
                     <div class="additional-info" data-aos="fade-up" data-aos-delay="600">
                       <div class="info-highlight">
                         <i class="bi bi-star-fill"></i>
-                        <span>Recommended to book 2-3 days in advance for weekend dining</span>
+                        <span>We recommend booking your event 2–3 days in advance for guaranteed availability.</span>
                       </div>
                     </div>
                   </div>
@@ -995,8 +1030,8 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <span class="description-title">Meet our team</span>
-        <h2>Officials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+<h2>Our <i class="bi bi-heart-fill"></i> Team</h2>
+<p>Our dedicated team works with passion and precision to bring your celebrations to life with creativity and care.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1004,17 +1039,17 @@
         <div class="featured-chef row align-items-center g-4" data-aos="fade-up" data-aos-delay="150">
           <div class="col-lg-6 col-12">
             <figure class="chef-photo m-0">
-              <img src="assets/img/restaurant/chef-4.webp" alt="Executive chef portrait" class="img-fluid">
+              <img src="assets/img/restaurant/img5.png" alt="Executive chef portrait" class="img-fluid">
               <div class="badge-overlay">
-                <span class="pill text-black"><i class="bi bi-star-fill me-1"></i> Michelin Mention</span>
+                <span class="pill text-black"><i class="bi bi-star-fill me-1"></i> Powered by Women, Perfected with Passion.</span>
               </div>
             </figure>
           </div>
           <div class="col-lg-6 col-12">
             <figure class="chef-photo m-0">
-              <img src="assets/img/restaurant/chef-4.webp" alt="Executive chef portrait" class="img-fluid">
+              <img src="assets/img/restaurant/img6.png" alt="Executive chef portrait" class="img-fluid">
               <div class="badge-overlay">
-                <span class="pill text-black"><i class="bi bi-star-fill me-1"></i> Michelin Mention</span>
+                <span class="pill text-black"><i class="bi bi-star-fill me-1"></i> Men of Taste. Masters of Catering.</span>
               </div>
             </figure>
           </div>
@@ -1035,7 +1070,7 @@
       <div class="container section-title" data-aos="fade-up">
         <span class="description-title">Gallery</span>
         <h2>Gallery</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Where every picture tells a celebration story</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1164,7 +1199,7 @@
       <div class="container section-title" data-aos="fade-up">
         <span class="description-title">Contact</span>
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Have an event in mind? Let’s talk and bring your vision to life.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1178,7 +1213,7 @@
               </div>
               <div class="info-content">
                 <h4>Our Address</h4>
-                <p>1842 Maple Avenue, Portland, Oregon 97204</p>
+                <p>Mundumuzhi, Vazhakkad Kerala – 673640 | India</p>
               </div>
             </div>
           </div>
@@ -1190,8 +1225,7 @@
               </div>
               <div class="info-content">
                 <h4>Email Address</h4>
-                <p>info@example.com</p>
-                <p>contact@example.com</p>
+                <p>farshaeventandcatering@gmail.com</p>
               </div>
             </div>
           </div>
@@ -1201,11 +1235,11 @@
               <div class="icon-box">
                 <i class="bi bi-headset"></i>
               </div>
-              <div class="info-content">
-                <h4>Hours of Operation</h4>
-                <p>Sunday-Fri: 9 AM - 6 PM</p>
-                <p>Saturday: 9 AM - 4 PM</p>
-              </div>
+                <div class="info-content">
+                  <h4>Hours of Operation</h4>
+                  <p>Monday – Sunday: 7:00 AM – 10:30 PM</p>
+                </div>
+
             </div>
           </div>
         </div>
@@ -1214,7 +1248,7 @@
 
       <!-- Google Maps (Full Width) -->
       <div class="map-section" data-aos="fade-up" data-aos-delay="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.22209836005!2d75.93343507531368!3d11.245065750374211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba645b3b05388f3%3A0x219d0fc3e41b3c1!2sFARSHA%20EVENT%20AND%20CATERING%20SERVICE!5e0!3m2!1sen!2sin!4v1765431925375!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <!-- Contact Form Section (Overlapping) -->
@@ -1291,7 +1325,7 @@
         <div class="col-lg-4">
           <div class="footer-content">
             <a href="index.html" class="logo d-flex align-items-center mb-4">
-              <span class="sitename">Platia</span>
+              <span class="sitename"><img src="assets/img/tab.png" alt=""></span>
             </a>
             <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque auctor sit amet aliquam vel ullamcorper sit amet ligula.</p>
 
@@ -1318,7 +1352,6 @@
             <ul>
               <li><a href="#"><i class="bi bi-chevron-right"></i> About</a></li>
               <li><a href="#"><i class="bi bi-chevron-right"></i> Careers</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Press</a></li>
               <li><a href="#"><i class="bi bi-chevron-right"></i> Blog</a></li>
               <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
             </ul>
@@ -1327,53 +1360,64 @@
 
         <div class="col-lg-2 col-6">
           <div class="footer-links">
-            <h4>Solutions</h4>
-            <ul>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Digital Strategy</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Cloud Computing</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Data Analytics</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> AI Solutions</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li>
-            </ul>
-          </div>
+  <h4>Our Services</h4>
+  <ul>
+    <li><a href="#"><i class="bi bi-chevron-right"></i> Event Planning</a></li>
+    <li><a href="#"><i class="bi bi-chevron-right"></i> Wedding Catering</a></li>
+    <li><a href="#"><i class="bi bi-chevron-right"></i> Stage & Lighting</a></li>
+    <li><a href="#"><i class="bi bi-chevron-right"></i> Venue Decorations</a></li>
+    <li><a href="#"><i class="bi bi-chevron-right"></i> Corporate Events</a></li>
+    <li><a href="#"><i class="bi bi-chevron-right"></i> Birthday Functions</a></li>
+    <li><a href="#"><i class="bi bi-chevron-right"></i> Full Crew & Management</a></li>
+  </ul>
+</div>
+
         </div>
 
         <div class="col-lg-4">
           <div class="footer-contact">
             <h4>Get in Touch</h4>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <div class="contact-info">
-                <p>2847 Maple Avenue<br>Los Angeles, CA 90210<br>United States</p>
-              </div>
-            </div>
+<div class="contact-item">
+  <div class="contact-icon">
+    <i class="bi bi-geo-alt"></i>
+  </div>
+  <div class="contact-info">
+    <p>
+      Mundumuzhi, Vazhakkad<br>
+      Malappuram, Kerala 673640<br>
+      India
+    </p>
+  </div>
+</div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="bi bi-telephone"></i>
-              </div>
-              <div class="contact-info">
-                <p>+1 (555) 987-6543</p>
-              </div>
-            </div>
+<div class="contact-item">
+  <div class="contact-icon">
+    <i class="bi bi-telephone"></i>
+  </div>
+  <div class="contact-info">
+    <p>+91 95624 62115</p>
+  </div>
+</div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="bi bi-envelope"></i>
-              </div>
-              <div class="contact-info">
-                <p>contact@example.com</p>
-              </div>
-            </div>
+<div class="contact-item">
+  <div class="contact-icon">
+    <i class="bi bi-envelope"></i>
+  </div>
+  <div class="contact-info">
+    <p>
+      <a href="mailto:farshaeventandcatering@gmail.com">
+        farshaeventandcatering@gmail.com
+      </a>
+    </p>
+  </div>
+</div>
+
 
             <div class="social-links">
               <a href="#"><i class="bi bi-facebook"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-              <a href="#"><i class="bi bi-linkedin"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-whatsapp"></i></a>
               <a href="#"><i class="bi bi-youtube"></i></a>
-              <a href="#"><i class="bi bi-github"></i></a>
             </div>
           </div>
         </div>
@@ -1386,22 +1430,19 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="copyright">
-              <p>© <span>Copyright</span> <strong class="px-1 sitename">Platia</strong> <span>All Rights Reserved</span></p>
+              <p>© <span>Copyright</span> <strong class="px-1 sitename">Farsha Events And Caterings</strong> <span>All Rights Reserved</span></p>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="footer-bottom-links">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
             </div>
-            <div class="credits">
-              <!-- All the links in the footer should remain intact. -->
-              <!-- You can delete the links only if you've purchased the pro version. -->
-              <!-- Licensing information: https://bootstrapmade.com/license/ -->
-              <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
+<div class="credits">
+  Designed with <i class="bi bi-heart-fill" style="color: #e63946;"></i> by 
+  <a href="https://tebinnovations.in">TEB Innovations</a>
+</div>
+
           </div>
         </div>
       </div>
@@ -1423,6 +1464,9 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
