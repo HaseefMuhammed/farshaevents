@@ -43,19 +43,6 @@
 
   <header id="header" class="header fixed-top">
 
-    <div class="topbar d-flex align-items-center dark-background">
-      <div class="container d-flex justify-content-center justify-content-md-between">
-        <div class="contact-info d-flex align-items-center">
-          <!-- <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:farshaeventandcatering@gmail.com">farshaeventandcatering@gmail.com</a></i> -->
-          <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:9562462115"><span>+91 95624 62115</span></a></i>
-        </div>
-        <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/farsha_event/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
-        </div>
-      </div>
-    </div><!-- End Top Bar -->
-
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -444,97 +431,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Community Section -->
-  <!-- <div class="community-section" data-aos="fade-up" data-aos-delay="200">
-    <div class="row g-4"> -->
-
-      <!-- <div class="col-lg-6" data-aos="fade-right" data-aos-delay="250">
-        <div class="community-card">
-          <div class="community-header">
-            <div class="community-icon">
-              <i class="bi bi-people-fill"></i>
-            </div>
-            <div>
-              <h3>Community Engagement</h3>
-              <p>Proudly supporting local talents, vendors, and communities through impactful collaborations.</p>
-            </div>
-          </div>
-
-          <div class="community-stats">
-            <div class="stat-row">
-
-              <div class="stat-item">
-                <span class="stat-number">150+</span>
-                <span class="stat-label">Local Vendors Supported</span>
-              </div>
-
-              <div class="stat-item">
-                <span class="stat-number">80+</span>
-                <span class="stat-label">Community Events Managed</span>
-              </div>
-
-            </div>
-
-            <div class="stat-row">
-              <div class="stat-item">
-                <span class="stat-number">5000+</span>
-                <span class="stat-label">Happy Families Served</span>
-              </div>
-
-              <div class="stat-item">
-                <span class="stat-number">100+</span>
-                <span class="stat-label">Collaborations with Artists</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Sustainability Section -->
-      <!-- <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-        <div class="sustainability-card">
-          <div class="sustainability-header">
-            <div class="sustainability-icon">
-              <i class="bi bi-brightness-high-fill"></i>
-            </div>
-            <div>
-              <h3>Sustainable Event Practices</h3>
-              <p>Creating celebrations responsibly with eco-conscious planning and mindful resource use.</p>
-            </div>
-          </div>
-
-          <div class="sustainability-features">
-
-            <div class="feature-item">
-              <i class="bi bi-recycle"></i>
-              <span>Eco-Friendly Decorations</span>
-            </div>
-
-            <div class="feature-item">
-              <i class="bi bi-leaf-fill"></i>
-              <span>Reduced Waste Catering Processes</span>
-            </div>
-
-            <div class="feature-item">
-              <i class="bi bi-lightning-fill"></i>
-              <span>Energy-Efficient Lighting Systems</span>
-            </div>
-
-            <div class="feature-item">
-              <i class="bi bi-cloud-upload-fill"></i>
-              <span>Digital Invitations & Paperless Planning</span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div> -->
-
-<!-- </div> -->
 
 
     </section><!-- /Events Section -->
@@ -1270,134 +1166,109 @@
 
    
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
+        <!-- Main Gallery Section -->
+    <section class="gallery-section mt-5" id="gallery">
+        <div class="container">
+            
+            <div class="section-title" data-aos="fade-up">
+                <span class="">Unforgettable Moments</span>
+                <h2>Our Gallery</h2>
+                <p>Curated memories from our recent celebrations</p>
+            </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Gallery</span>
-        <h2>Gallery</h2>
-        <p>Where every picture tells a celebration story</p>
-      </div><!-- End Section Title -->
+            <!-- Masonry Layout (Varying Heights) -->
+            <div class="masonry-grid">
+                
+                <!-- Item 1: Portrait (Tall 600x900) -->
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600&h=900" alt="Wedding Cake" loading="lazy"  data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Elegant Details</h4>
+                        <p>Wedding Cake & Decor</p>
+                    </div>
+                </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <!-- Item 2: Landscape (Wide 600x400) -->
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=600&h=400" alt="Venue Setup" loading="lazy"  data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Grand Reception</h4>
+                        <p>Outdoor Illumination</p>
+                    </div>
+                </div>
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-          <ul class="restaurant-gallery-filters isotope-filters mb-4 justify-content-center d-flex gap-2" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-food">Food</li>
-            <li data-filter=".filter-drinks">Drinks</li>
-            <li data-filter=".filter-interior">Interior</li>
-            <li data-filter=".filter-staff">Staff</li>
-          </ul>
+                <!-- Item 3: Square (600x600) -->
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&q=80&w=600&h=600" alt="Couple" loading="lazy"  data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Timeless Love</h4>
+                        <p>Portrait Sessions</p>
+                    </div>
+                </div>
 
-          <div class="row g-3 isotope-container" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-4 col-md-6 isotope-item filter-food">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/main-3.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/main-3.webp" alt="Grilled Salmon" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Grilled Salmon</span>
-                  <span>Fresh salmon with lemon butter sauce.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-interior">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/showcase-2.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/showcase-2.webp" alt="Dining Hall" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Dining Hall</span>
-                  <span>Spacious, warm and welcoming ambiance.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-staff">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/chef-5.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/chef-5.webp" alt="Chef Maria" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Chef Maria</span>
-                  <span>Our creative chef behind every dish.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-drinks">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/drink-2.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/drink-2.webp" alt="Signature Mocktail" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Signature Mocktail</span>
-                  <span>Vibrant blend of fresh citrus and herbs.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-food">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/dessert-4.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/dessert-4.webp" alt="Raspberry Tart" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Raspberry Tart</span>
-                  <span>Sweet pastry filled with creamy vanilla custard.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-interior">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/showcase-5.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/showcase-5.webp" alt="Bar Area" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Bar Area</span>
-                  <span>Cozy spot for cocktails and good conversation.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-staff">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/chef-2.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/chef-2.webp" alt="Sous Chef Daniel" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Sous Chef Daniel</span>
-                  <span>Expert in modern fusion cuisine.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-drinks">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/drink-8.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/drink-8.webp" alt="Classic Espresso" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Classic Espresso</span>
-                  <span>Rich and aromatic, served to perfection.</span>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="col-lg-4 col-md-6 isotope-item filter-food">
-              <figure class="gallery-card">
-                <a href="assets/img/restaurant/main-7.webp" class="glightbox" data-gallery="restaurant-gallery">
-                  <img src="assets/img/restaurant/main-7.webp" alt="Beef Fillet" class="img-fluid rounded" loading="lazy">
-                </a>
-                <figcaption class="caption">
-                  <span class="caption-title">Beef Fillet</span>
-                  <span>Tender beef with herb roasted vegetables.</span>
-                </figcaption>
-              </figure>
-            </div>
-          </div><!-- End Gallery Items Container -->
+                <!-- Item 4: Tall Portrait (600x850) -->
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600&h=830" alt="Table Setting" loading="lazy"  data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Table Setting</h4>
+                        <p>Fine Dining Experience</p>
+                    </div>
+                </div>
 
+               
+
+                 <!-- Item 6: Extra Tall (600x1000) -->
+                 <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600&h=1000" alt="Bride" loading="lazy"  data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Bridal Beauty</h4>
+                        <p>Candid Moments</p>
+                    </div>
+                </div>
+
+                <!-- Item 7: Wide Landscape (600x450) -->
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&q=80&w=600&h=750" alt="Catering" loading="lazy" data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Exquisite Catering</h4>
+                        <p>Gourmet Selection</p>
+                    </div>
+                </div>
+                 <!-- Item 8: Medium Portrait (600x750) -->
+                 <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=600&h=750" alt="Party Lights" loading="lazy" data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Night Ambiance</h4>
+                        <p>Lighting & Mood</p>
+                    </div>
+                </div>
+
+                 <!-- Item 5: Panoramic Landscape (600x350) -->
+                <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="updateModal(this)">
+                    <img src="https://images.unsplash.com/photo-1607861884586-c7cfaed16290?auto=format&fit=crop&q=80&w=600&h=338" alt="Decor" loading="lazy" data-aos="fade-up">
+                    <div class="gallery-overlay">
+                        <h4>Floral Arrangements</h4>
+                        <p>Seasonal Blooms</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
 
-      </div>
+    <script>
+      // Simple script to update the modal with the clicked image details
+        function updateModal(element) {
+            const img = element.querySelector('img');
+            const title = element.querySelector('h4').innerText;
+            const desc = element.querySelector('p').innerText;
+            
+            document.getElementById('modalImage').src = img.src;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+        }
 
-    </section><!-- /Gallery Section -->
+    </script>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
@@ -1515,83 +1386,6 @@
                 </div>
               </form>
             </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- FAQ Section inside Contact -->
-      <div class="container mt-5" data-aos="fade-up" data-aos-delay="100">
-        
-        <div class="section-title text-center mb-5" data-aos="fade-up">
-          <span class="description-title">Common Questions</span>
-          <h2>Frequently Asked Questions</h2>
-          <p>Find quick answers to help you plan your perfect event</p>
-        </div>
-
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-8">
-            
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
-              <h4 class="faq-question">
-                <i class="bi bi-question-circle"></i>
-                How far in advance should I book an event?
-              </h4>
-              <p class="faq-answer">
-                We recommend booking your event 2-3 days in advance for guaranteed availability. However, we also accommodate last-minute events based on our schedule. Contact us immediately for urgent bookings.
-              </p>
-            </div>
-
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="faq-question">
-                <i class="bi bi-question-circle"></i>
-                Do you provide customized menu options?
-              </h4>
-              <p class="faq-answer">
-                Absolutely! We offer fully customized menus tailored to your preferences, dietary requirements, and budget. Our experienced team will work with you to create the perfect dining experience for your guests.
-              </p>
-            </div>
-
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
-              <h4 class="faq-question">
-                <i class="bi bi-question-circle"></i>
-                What areas do you serve?
-              </h4>
-              <p class="faq-answer">
-                We primarily serve Malappuram and surrounding areas in Kerala. Our team is equipped to handle events at any location within our service region with professional on-site management.
-              </p>
-            </div>
-
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-              <h4 class="faq-question">
-                <i class="bi bi-question-circle"></i>
-                What is included in your event planning package?
-              </h4>
-              <p class="faq-answer">
-                Our comprehensive packages include event planning, catering, stage décor, lighting, sound management, and full on-site coordination. We customize packages based on your specific needs and budget.
-              </p>
-            </div>
-
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
-              <h4 class="faq-question">
-                <i class="bi bi-question-circle"></i>
-                Do you handle dietary restrictions and allergies?
-              </h4>
-              <p class="faq-answer">
-                Yes, we take dietary restrictions very seriously. Our certified kitchen team can accommodate vegetarian, vegan, gluten-free, and allergy-friendly menus. Please inform us in advance about any special requirements.
-              </p>
-            </div>
-
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="faq-question">
-                <i class="bi bi-question-circle"></i>
-                What is your cancellation and rescheduling policy?
-              </h4>
-              <p class="faq-answer">
-                We offer flexible cancellation and rescheduling options. Please contact us for specific details about our policies, which may vary based on event type and booking date.
-              </p>
-            </div>
-
           </div>
         </div>
 
